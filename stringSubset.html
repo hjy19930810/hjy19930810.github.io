@@ -1,60 +1,107 @@
-1.substr
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对字符串进行截取的常见操作</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+           background-color: rgb(224, 224, 224);
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-size: 20px;
+        }
+        .p{
+            text-align: left
+        }
+        h2{
+            font-size: 35px;
+            color: rgb(0, 0, 153);
+        }
+        .pSpan{
+            font-size: 25px;
+            color: rgb(0, 0, 153);         
+        }
 
-substr(start,length)表示从start位置开始，截取length长度的字符串。
+    </style>
+</head>
+<body>
+    <center><h1>对字符串进行截取的常见操作</h1></center>
+        <div>
+            <p class="p">
+                <h2>1.substr</h2>
+                <span class="pSpan">substr(start,length)表示从start位置开始，截取length长度的字符串</span>
+            </p>
+            <ul>
+                <li>var src="images/off_1.png";</li>
+                <li>alert(src.substr(7,3));</li>
+                <li>弹出值为：off</li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p class="p">
+                <h2>2.substring</h2>
+                <span class="pSpan">substring(start,end)表示从start到end之间的字符串，包括start位置的字符但是不包括end位置的字符。</span>
+            </p>
+            <ul>
+                <li>var src="images/off_1.png";</li>
+                <li>alert(src.substring(7,10));</li>
+                <li>弹出值为：off</li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p class="p">
+                <h2>3.indexOf</h2>
+                <span class="pSpan">indexOf() 方法返回某个指定的字符串值在字符串中首次出现的位置（从左向右）。没有匹配的则返回-1，否则返回首次出现位置的字符串的下标值。</span>
+            </p>
+            <ul>
+                <li>var src="images/off_1.png";</li>
+                <li>alert(src.indexOf('t'));</li>
+                <li>alert(src.indexOf('i'));</li>
+                <li>alert(src.indexOf('g'));</li>
+                <li>弹出值依次为：-1,0,3</li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p class="p">
+                <h2>4.lastIndexOf</h2>
+                <span class="pSpan">lastIndexOf()方法返回从右向左出现某个字符或字符串的首个字符索引值（与indexOf相反）</span>
+            </p>
+            <ul>
+                <li>var src="images/off_1.png";</li>
+                <li>alert(src.lastIndexOf('/'));</li>
+                <li>alert(src.lastIndexOf('g'));</li>
+                <li>弹出值依次为：6,15</li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p class="p">
+                <h2>5.split</h2>
+                <span class="pSpan">将一个字符串分割为子字符串，然后将结果作为字符串数组返回。以空格分割返回一个了字符串返回</span>
+            </p>
+            <ul>
+                <li>
+                <pre>
+                    function splitDemo(){
+                        var s, ss;
+                        var s = "The rain in Spain falls mainly in the plain.";
+                        // 在每个空格字符处进行分解。
+                        ss = s.split(" ");
+                        return(ss);
+                    }
+                </pre>    
+                </li>
+            </ul>
+        </div>
+</body>
+</html>  
 
-var src="images/off_1.png";
-alert(src.substr(7,3));
-
-弹出值为：off
-
- 
-
-2.substring
-
-substring(start,end)表示从start到end之间的字符串，包括start位置的字符但是不包括end位置的字符。
-
-var src="images/off_1.png";
-alert(src.substring(7,10));
-
-弹出值为：off
-
- 
-
-3.indexOF
-
-indexOf() 方法返回某个指定的字符串值在字符串中首次出现的位置（从左向右）。没有匹配的则返回-1，否则返回首次出现位置的字符串的下标值。
-
-var src="images/off_1.png";
-alert(src.indexOf('t'));
-alert(src.indexOf('i'));
-alert(src.indexOf('g'));
-
-弹出值依次为：-1,0,3
-
- 
-
-4.lastIndexOf
-
-lastIndexOf()方法返回从右向左出现某个字符或字符串的首个字符索引值（与indexOf相反）
-
-var src="images/off_1.png";
-alert(src.lastIndexOf('/'));
-alert(src.lastIndexOf('g'));
-
-弹出值依次为：6,15
-
-5.split
-
- 
-
-将一个字符串分割为子字符串，然后将结果作为字符串数组返回。
-
-以空格分割返回一个了字符串返回
-
-function SplitDemo(){
-   var s, ss;
-   var s = "The rain in Spain falls mainly in the plain.";
-   // 在每个空格字符处进行分解。
-   ss = s.split(" ");
-   return(ss);
-}
