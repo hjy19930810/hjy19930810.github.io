@@ -1,11 +1,282 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>Document</title>
-  </head>
-  <body>
-      <h1>woowo wowowo</h1>
-      <h2 style="color:red">慢慢学，好好学</h2>
-  </body>
-  </html>
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="css/init.css" />
+	<link rel="stylesheet" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<title>我的个人前端之旅</title>
+</head>
+<body>
+<!-- header navigation -->
+<header>
+	<div id="logo">
+		<div id="header_img"><img src="image/logo.jpg" alt="" /></div>
+		<div id="header_p">
+			<p id="header_p1">个人信息</p>
+		</div>
+	</div>
+	<nav>
+		<ul class="nav">
+			<li class="old"><a class="act page1" href="#page1">首页</a></li>
+			<li class="old"><a class="page2" href="#page2">关于我</a></li>
+			<li class="old"><a class="page3" href="#page3">专业技能</a></li>
+			<li class="old"><a class="page4" href="#page4">学习经历</a></li>
+			<li class="old"><a class="page5" href="#page5">我的作品</a></li>
+			<li class="old"><a class="page6" href="#page6">联系方式</a></li>
+		</ul>
+		<ul class="mobile"><ul>
+	</nav>
+</header>
+<!-- header navigation end -->
+<!-- aside navigation -->
+<aside>
+		<a href="#page1"><b>首页</b></a>
+		<a href="#page2"><b>关于我</b></a>
+		<a href="#page3"><b>专业技能</b></a>
+		<a href="#page4"><b>学习经历</b></a>
+		<a href="#page5"><b>我的作品</b></a>
+		<a href="#page6"><b>联系方式</b></a>
+</aside>
+<!-- aside navigation end -->
+<!-- home page -->
+<div id="dowebok">
+	<!-- home -->
+	<div class="section one">
+		<div id="home">
+			<div id="home_content">
+				<div id="home_head">
+					<div id="home_head_content">
+						<img src="image/photo1.jpg" id="home_photo1" alt="" />
+						<img src="image/photo2.jpg" id="home_photo2" alt="" />
+					</div>
+				</div>
+				<div id="home_info">
+					    <p id="home_info1">求知若渴，虚怀若愚</p>
+					
+						<p id="home_info2"></p>
+						<p id="home_info3">我叫黄金耀  24岁</p>
+						<p id="home_info4">是一名Web前端开发工程师</p>
+						<p id="home_info5">hjy9308@163.com</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- home end -->
+	<!-- about -->
+	<div class="section two">
+		<div id="about">
+			<div id="about_content">
+				<div class="title">
+					<h1>关于我</h1>
+				</div>
+				<div id="about_list_content">
+					<div class="about_list" id="about_list1">
+						<div class="about_list_eg" id="about_en_edu">education</div>
+						<div class="about_list_cn" id="about_cn_edu">学历<p>本科</p></div>
+					</div>
+                    <div class="about_list" id="about_list2">
+                        <div class="about_list_eg" id="about_en_age">age</div>
+                        <div class="about_list_cn" id="about_cn_age">年龄<p>22岁</p></div>
+                    </div>
+                    <div class="about_list" id="about_list3">
+                        <div class="about_list_eg" id="about_en_loc">location</div>
+                        <div class="about_list_cn" id="about_cn_loc">现居<p>厦门</p></div>
+                    </div>
+                    <div class="about_list" id="about_list4">
+                        <div class="about_list_eg" id="about_en_sta">status</div>
+                        <div class="about_list_cn" id="about_cn_sta">目前<p>离职中</p></div>
+                    </div>
+				</div>
+				<div id="about_info" class="about_info"></div>
+			</div>
+		</div>
+	</div>
+    <!-- about end -->
+    <!-- skill -->
+    <div class="section three">
+		<div id="skill">
+			<div id="skill_content">
+				<div class="title">
+					<h1>专业技能</h1>
+				</div>
+				<div id="skill_info"></div>
+                <div id="skill_list">
+                    <div class="skill_list_content" id="skill_list2">
+                        <div class="skill_icon" id="skill_icon2"></div>
+                        <div class="skill_name">HTML</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int2">
+                          <p>熟悉wc3标准，能够写出兼容IE、Firefox、chorm等主流浏览器网页；</p>
+                          <p>能够熟练的运用bootstrap等UI框架结合Html来实现界面的展示；</p>
+                          <p>熟悉H5新特性</p>
+                        </div>
+                    </div>
+                    <div class="skill_list_content" id="skill_list3">
+                        <div class="skill_icon" id="skill_icon3"></div>
+                        <div class="skill_name">CSS</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int3">
+                          <p>精通DIV+CSS布局方式</p>
+                          <p>熟悉CSS3新特性，并且能够熟练的使用；</p>
+                          <p>对CSS性能优化有一定的了解</p>
+                        </div>
+                    </div>
+                    <div class="skill_list_content" id="skill_list4">
+                        <div class="skill_icon" id="skill_icon4"></div>
+                        <div class="skill_name">JavaScript</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int4">
+                          <p>能够熟练运用JS写脚本代码</p>
+                          <p>能够熟练的运用jQuery各类插件</p>
+                          <p>正在学习ES6和angularjs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- skill end  -->
+    <!-- experience -->
+    <div class="section four">
+    	<div id="exp">
+        	<div id="exp_content">
+        		<div class="title">
+                	<h1>学习经历</h1>
+                </div>
+                <div id="exp_info" class="exp_scale"></div>
+                <div id="exp_list_slider">
+                	<div id="exp_list_slider_content" class="exp_scale">
+                        <div id="exp_list_content">
+                            <div class="exp_list">
+                                <div class="exp_list_left">
+                               		<div id="exp_list_left1">
+                                        <dl>
+                                            <dt>大一</dt>
+                                            <dd class="exp_list_time">2011年9月~2012年6月</dd>
+                                            <dd>学习c，c++，高数等基本课程</dd>
+                                       
+                                        </dl>
+                                    </div>
+                                </div>
+                        	</div>
+                        	<div class="exp_list">
+                                <div class="exp_list_left">
+                                	<div id="exp_list_left2">
+                                        <dl>
+                                            <dt>大二</dt>
+                                            <dd class="exp_list_time">2012年9月~2013年6月</dd>
+                                            <dd>学习PS、html，CSS，利用这些知识可以写出大部分的网站的静态界面</dd>
+                                      
+                                        </dl>
+                                    </div>
+                            	</div>
+                        	</div>
+                            <div class="exp_list">
+                                <div class="exp_list_left">
+                                    <div id="exp_list_left3">
+                                        <dl>
+                                            <dt>大三</dt>
+                                            <dd class="exp_list_time">2013年9月~2014年6</dd>
+                                            <dd>大三时期开始深入学习前端，对前端非常感兴趣,并且开始学习javaScript和前端UI框架</dd>
+                                        
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div id="exp_list_to">
+                    	<div id="exp_list_toleft"><img src="image/exp_list_toleft.png" /></div>
+                    	<div id="exp_list_toright"><img src="image/exp_list_toright.png" /></div>
+                    </div>
+                    </div>
+                    <div id="exp_timeline" class="exp_scale">
+                    	<div class="color">
+                            <a class="time timecolor1 timecolor" href="#" title="">1</a>
+                            <a class="time timecolor2" href="#" title="">2</a>
+                            <a class="time timecolor3" href="#" title="">3</a>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <!-- experience end -->
+    <!-- demo -->
+    <div class="section five">
+    	<div id="demo">
+        	<div id="demo_content">
+            	<div class="title">
+                	<h1>我的作品</h1>
+                </div>
+                
+                <div class="code">更多代码请转至:<br/><a href="https://github.com/CynScm/front-end-subjects"><img src="image/github.jpg"></a></div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- demo end -->
+    <!-- contact -->
+	<div class="section six">
+		<div class="bg-blur"></div>
+		<div id="contact">
+			
+			<div id="contact_content">
+				<div class="title">
+					<h1>联系我</h1>
+				</div>
+                <div id="contact_head">
+					<div id="contact_head1"></div>
+                    <div id="contact_head2">
+                    	<span>手机：15659897346</span><br />
+                        <span>qq：277730726</span><br />
+                        <span>微信：jinyao_</span><br />
+                        <br/>
+                        <div id="contact_info" class="contact_scale">
+                             <ul></ul>
+                        </div>
+                    </div>
+                </div>
+                
+               
+            </div>
+            <footer class="contact_scale">
+				<div class="contact_scale footer">
+                    <!--<a href="http://www.cnblogs.com/caiyineng/" target="_blank">博客园</a>|-->
+                    <!--<a href="http://www.toutiao.com/m51203981209/" target="_blank">头条号</a>|-->
+                    <a href="#" target="_blank">个人主页</a>|
+                    <a href="https://github.com/hjy19930810/" target="_blank">Github</a>
+                </div>
+			</footer>
+        </div>
+	</div>
+    <!-- contact end -->
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/index.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--http://caiyineng.com/#page5-->
