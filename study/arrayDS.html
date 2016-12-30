@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数组去重的原型链方法</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(207,229,234);
+        }
+    .pre{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+        h2{
+            color: #0a5ac6;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: red;text-align:center">本页面总结了市面上集中常见的数组去重和数组排序方法,供大家参考</h1>
+<pre class="pre">
+    <h2>第一种方法</h2>
+    Array.prototype.unique1 = function () {
+        var n = []; //一个新的临时数组
+        for (var i = 0; i < this.length; i++) //遍历当前数组
+        {
+            //如果当前数组的第i已经保存进了临时数组，那么跳过，
+            //否则把当前项push到临时数组里面
+
+            if (n.indexOf(this[i]) == -1) {
+                n.push(this[i]);
+            }
+        }
+        return n;
+    }
+    var arr = [112, 112, 34, '你好', 112, 112, 34, '你好', 'str', 'str1'];
+    console.info('第一种方法：利用indexOf方法来判断下当前数组对象的值的下标是否在临时数组中第一次出现，如果是,将它放入临时数组中去.')
+    console.log(arr.unique1());
+    //总结：利用indexOf方法来判断下当前数组对象的值的下标是否在临时数组中第一次出现，如果是,将它放入临时数组中去.
+    //这个方法推荐大家记住，面试的时候使用.
+</pre>
+<pre class="pre">
+    <h2>第二种方法</h2>
+     Array.prototype.unique2 = function () {
+        this.sort(); //关键点:必须先排序
+        var res = [this[0]];
+        for (var i = 1; i < this.length; i++) {
+            //判断当前对象的值和临时数组res的值是否相等
+            if (this[i] !== res[res.length - 1]) {
+                res.push(this[i]);
+            }
+        }
+        return res;
+    };
+    var arr = [1, 'a', 'a', 'b', 'd', 'a','e', 'e', 1, 0]
+    console.info('第二种方法：先排序，然后判断当前数组对象的值和临时数组的值是否相等')
+    console.log(arr.unique2());
+    //总结:
+    //1.首先方法挂载到了数组的原型链中去，方便直接调用
+    //2.在数组去重的时候一定要优先进行排序
+    //缺点:
+    //1.在数据较大的情况下，容易造成资源的浪费，开辟较大的空间用于存储结果，并
+    //需要不停的push新的内容到新数组当中去.
+    //2.排序方法比较低级
+</pre>
+<pre class="pre">
+    <h2>第三种方法</h2>
+    Array.prototype.unique3 = function(){
+         var res = [];
+         var json = {};
+         for(var i = 0; i < this.length; i++){
+             if(!json[this[i]]){
+                 res.push(this[i]);
+                 json[this[i]] = 1;
+             }
+         }
+         return res;
+    };
+     var arr = [112,112,34,'你好',112,112,34,'你好','str','str1'];
+     console.info('第三种方法：在一个空的对象上来添加属性，如果添加过了说明数据已经存入结果数组中了')
+     console.log(arr.unique3());
+    //总结:在一个空的对象上来添加属性，如果添加过了说明数据已经存入结果数组中了,
+    //如果对象的属性不存在，则说明元素是第一次添加。
+    //通过对象属性的方法来判断元素是否是第一次添加，如果是，则添加，如果不是，则不添加.
+    //缺点:是要创建一个对象来通过对象属性判断.
+</pre>
+<pre class="pre">
+    <h2>数组排序1：冒泡排序</h2>
+</pre>
+<pre class="pre">
+    <h2>数组排序2：插入排序</h2>
+</pre>
+</body>
+</html>
+<script>
+    Array.prototype.unique1 = function () {
+        var n = []; //一个新的临时数组
+        for (var i = 0; i < this.length; i++) //遍历当前数组
+        {
+            //如果当前数组的第i已经保存进了临时数组，那么跳过，
+            //否则把当前项push到临时数组里面
+
+            if (n.indexOf(this[i]) == -1) {
+                n.push(this[i]);
+            }
+        }
+        return n;
+    }
+    var arr = [112, 112, 34, '你好', 112, 112, 34, '你好', 'str', 'str1'];
+    console.info('第一种方法：利用indexOf方法来判断下当前数组对象的值的下标是否在临时数组中第一次出现，如果是,将它放入临时数组中去.')
+    console.log(arr.unique1());
+    //总结：利用indexOf方法来判断下当前数组对象的值的下标是否在临时数组中第一次出现，如果是,将它放入临时数组中去.
+    //这个方法推荐大家记住，面试的时候使用.
+
+
+    Array.prototype.unique2 = function () {
+        this.sort(); //关键点:必须先排序
+        var res = [this[0]];
+        for (var i = 1; i < this.length; i++) {
+            //判断当前对象的值和临时数组res的值是否相等
+            if (this[i] !== res[res.length - 1]) {
+                res.push(this[i]);
+            }
+        }
+        return res;
+    };
+    var arr = [1, 'a', 'a', 'b', 'd', 'a','e', 'e', 1, 0]
+    console.info('第二种方法：先排序，然后判断当前数组对象的值和临时数组的值是否相等')
+    console.log(arr.unique2());
+    //总结:
+    //1.首先方法挂载到了数组的原型链中去，方便直接调用
+    //2.在数组去重的时候一定要优先进行排序
+    //缺点:
+    //1.在数据较大的情况下，容易造成资源的浪费，开辟较大的空间用于存储结果，并
+    //需要不停的push新的内容到新数组当中去.
+    //2.排序方法比较低级
+
+
+    Array.prototype.unique3 = function(){
+         var res = [];
+         var json = {};
+         for(var i = 0; i < this.length; i++){
+             if(!json[this[i]]){
+                 res.push(this[i]);
+                 json[this[i]] = 1;
+             }
+         }
+         return res;
+    };
+     var arr = [112,112,34,'你好',112,112,34,'你好','str','str1'];
+     console.info('第三种方法：在一个空的对象上来添加属性，如果添加过了说明数据已经存入结果数组中了')
+     console.log(arr.unique3());
+    //总结:在一个空的对象上来添加属性，如果添加过了说明数据已经存入结果数组中了,
+    //如果对象的属性不存在，则说明元素是第一次添加。
+    //通过对象属性的方法来判断元素是否是第一次添加，如果是，则添加，如果不是，则不添加.
+    //缺点:是要创建一个对象来通过对象属性判断.
+
+</script>
