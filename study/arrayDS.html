@@ -92,9 +92,40 @@
 </pre>
 <pre class="pre">
     <h2>数组排序1：冒泡排序</h2>
+    //冒泡排序.
+    var arr = [2, 4, 9, 11, 6, 3, 88, 33];
+    for (var x = 0; x < arr.length; x++) {
+        for (var y = x + 1; y < arr.length; y++) {
+            if (arr[x] > arr[y]) {
+                var temp = arr[x];
+                arr[x] = arr[y];
+                arr[y] = temp;
+            }
+        }
+    }
+    console.log(arr);
 </pre>
 <pre class="pre">
     <h2>数组排序2：插入排序</h2>
+    // 插入排序 从下标1开始每增1项排序一次，越往后遍历次数越多
+    function sort1(array) {
+        var len = array.length, i, j, tmp, result;
+
+        // 设置数组副本
+        result = array.slice(0);//slice() 方法可从已有的数组中返回选定的元素。
+        for (i = 1; i < len; i++) {
+            tmp = result[i];
+            j = i - 1;
+            while (j >= 0 && tmp < result[j]) {
+                result[j + 1] = result[j];
+                j--;
+            }
+            result[j + 1] = tmp;
+        }
+        return result;
+    }
+    var arr2 = [3, 6, 8, 11, 0, 9]
+    console.log(sort1(arr2));
 </pre>
 </body>
 </html>
@@ -160,5 +191,38 @@
     //如果对象的属性不存在，则说明元素是第一次添加。
     //通过对象属性的方法来判断元素是否是第一次添加，如果是，则添加，如果不是，则不添加.
     //缺点:是要创建一个对象来通过对象属性判断.
+
+ //冒泡排序.
+    var arr = [2, 4, 9, 11, 6, 3, 88, 33];
+    for (var x = 0; x < arr.length; x++) {
+        for (var y = x + 1; y < arr.length; y++) {
+            if (arr[x] > arr[y]) {
+                var temp = arr[x];
+                arr[x] = arr[y];
+                arr[y] = temp;
+            }
+        }
+    }
+    console.log(arr);
+
+    // 插入排序 从下标1开始每增1项排序一次，越往后遍历次数越多
+    function sort1(array) {
+        var len = array.length, i, j, tmp, result;
+
+        // 设置数组副本
+        result = array.slice(0);//slice() 方法可从已有的数组中返回选定的元素。
+        for (i = 1; i < len; i++) {
+            tmp = result[i];
+            j = i - 1;
+            while (j >= 0 && tmp < result[j]) {
+                result[j + 1] = result[j];
+                j--;
+            }
+            result[j + 1] = tmp;
+        }
+        return result;
+    }
+    var arr2 = [3, 6, 8, 11, 0, 9]
+    console.log(sort1(arr2));
 
 </script>
