@@ -1,0 +1,13 @@
+* {margin:0; padding:0}
+body {font:14px Helvetica, sans-serif; font-weight:bold; background:#FFF}
+ul.line{
+	width: 500px;
+	height: 30px;
+	background-color: #F8F8F8;
+	overflow: hidden;
+	margin-bottom: 20px;
+	border: 2px solid #363636;
+	margin-top: 100px;
+	margin-left: 100px;
+} 
+ul.line li{height:30px;text-indent:15px; font-size:12px; line-height:30px;list-style:none} 
